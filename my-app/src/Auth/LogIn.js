@@ -19,6 +19,7 @@ class LogIn extends React.Component {
     axios
       .post(endpoint, this.state)
       .then(res => {
+        console.log('RESPONSE', res.data);
         localStorage.setItem('jwt', res.data.token)
       })
       .catch(err => {
